@@ -1,0 +1,170 @@
+{
+  "lang": "en",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "cta": "Request a Quote"
+  },
+  "hero": {
+    "label": "Building Excellence",
+    "line1": "We Build",
+    "line2": "the Future",
+    "line3": "With You.",
+    "subtitle": "Over 20 years of experience in residential, commercial and industrial construction. Quality, safety and on-time delivery in every project.",
+    "btnProjects": "View Projects",
+    "btnQuote": "Request a Quote",
+    "founded": "Founded in",
+    "scroll": "Scroll",
+    "stats": {
+      "projects": "Projects Delivered",
+      "experience": "Years of Experience",
+      "satisfaction": "Satisfied Clients",
+      "awards": "Awards & Certifications"
+    }
+  },
+  "about": {
+    "label": "Who we are",
+    "title1": "Building",
+    "title2": "legacies",
+    "title3": "for two decades.",
+    "p1": "Founded in 2004, Edifica was born with a clear purpose: to deliver construction projects that stand the test of time, with the technical excellence and human care that every client deserves.",
+    "p2": "Our multidisciplinary team — engineers, architects and project managers — works in an integrated way so every project is executed safely, with quality and on schedule.",
+    "badge": "Years of experience",
+    "cta": "Learn Our Story",
+    "differentials": [
+      "ISO 9001 — Quality Management",
+      "Specialized technical team",
+      "On-time delivery guaranteed",
+      "Transparency at every stage"
+    ]
+  },
+  "services": {
+    "label": "What we do",
+    "title1": "Complete solutions",
+    "title2": "in construction.",
+    "subtitle": "From conception to delivery, we offer integrated services for every stage of your project.",
+    "ctaAll": "View all services",
+    "items": [
+      { "title": "Residential Construction", "desc": "Houses and apartments designed for your lifestyle, with high-durability materials and premium finishes." },
+      { "title": "Commercial Works", "desc": "Offices, shops and corporate buildings delivered efficiently and to the highest technical standards." },
+      { "title": "Industrial Projects", "desc": "Warehouses, logistics centers and industrial facilities focused on operational safety and practicality." },
+      { "title": "Renovation & Retrofit", "desc": "Revitalization of existing spaces, modernizing while preserving the original character of the building." },
+      { "title": "Project Management", "desc": "Full coordination of your project: schedule, budget, quality and compliance at every phase." },
+      { "title": "Technical Consulting", "desc": "Reports, inspections and technical assessments by certified engineers to support your decisions." }
+    ]
+  },
+  "projects": {
+    "label": "Portfolio",
+    "title1": "Works that",
+    "title2": "speak",
+    "title3": "for themselves.",
+    "ctaAll": "View all projects",
+    "filters": {
+      "all": "All",
+      "residential": "Residential",
+      "commercial": "Commercial",
+      "industrial": "Industrial"
+    },
+    "details": {
+      "location": "Location",
+      "year": "Year",
+      "area": "Area",
+      "close": "Close"
+    }
+  },
+  "differentials": {
+    "label": "Why us",
+    "title1": "Why choose",
+    "title2": "Edifica?",
+    "subtitle": "Our methodology goes beyond technique. It is about commitment to people and results.",
+    "ctaTitle": "Ready to start",
+    "ctaTitle2": "your project?",
+    "ctaSubtitle": "Talk to our team and receive a personalized quote.",
+    "ctaBtn": "Get a Free Quote",
+    "items": [
+      { "title": "Total Safety", "desc": "All sites rigorously follow applicable safety standards and hold occupational safety certifications." },
+      { "title": "On-Time Delivery", "desc": "We meet deadlines. Our track record proves it: 97% of projects delivered on the agreed date." },
+      { "title": "Certified Quality", "desc": "ISO 9001 certified, ensuring processes and materials meet the highest standards." },
+      { "title": "Experienced Team", "desc": "Over 150 dedicated professionals — engineers, site managers and technical specialists." },
+      { "title": "Sustainability", "desc": "Sustainable building practices, waste reduction and conscious use of natural resources." },
+      { "title": "Transparency", "desc": "Regular reports, online access to project progress and monthly follow-up meetings." }
+    ]
+  },
+  "contact": {
+    "label": "Get in Touch",
+    "title1": "Let's build",
+    "title2": "together?",
+    "subtitle": "Contact us and our commercial team will get back to you within 24 hours with a personalized quote for your project.",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Business Hours",
+    "hoursValue": "Monday to Friday: 8am – 6pm",
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "Your name",
+      "phoneField": "Phone / WhatsApp",
+      "phonePlaceholder": "+1 000 000 0000",
+      "emailField": "Email",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Describe your project or inquiry...",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "privacy": "Your data is protected and will never be shared with third parties.",
+      "sendAnother": "Send another message",
+      "successTitle": "Message sent!",
+      "successDesc": "We received your message. Our team will reach out within 24 hours.",
+      "errors": {
+        "nameRequired": "Name is required",
+        "nameMin": "Minimum 2 characters",
+        "nameMax": "Maximum 100 characters",
+        "phoneRequired": "Phone is required",
+        "phoneInvalid": "Invalid phone number",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Invalid email",
+        "emailMax": "Email too long",
+        "messageRequired": "Message is required",
+        "messageMin": "Minimum 10 characters",
+        "messageMax": "Maximum 2000 characters"
+      }
+    }
+  },
+  "footer": {
+    "company": "Company",
+    "services": "Services",
+    "contact": "Contact",
+    "tagline": "Building excellence for over 20 years. Every project is treated with dedication and commitment to quality.",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "servicesList": [
+      "Residential Construction",
+      "Commercial Works",
+      "Renovation & Retrofit",
+      "Project Management",
+      "Industrial Projects"
+    ]
+  },
+  "seo": {
+    "homeTitle": "Edifica Construction | Building Dreams with Excellence",
+    "homeDesc": "Edifica — 20 years of excellence in residential, commercial and industrial construction.",
+    "aboutTitle": "About Us",
+    "aboutDesc": "Learn about Edifica's story — 20 years building with excellence and certified quality.",
+    "servicesTitle": "Services",
+    "servicesDesc": "Residential, commercial, industrial, renovation, project management and consulting.",
+    "projectsTitle": "Projects",
+    "projectsDesc": "Portfolio of projects delivered with excellence.",
+    "contactTitle": "Contact",
+    "contactDesc": "Get in touch and request a free quote for your project."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "desc": "The address you accessed does not exist or has been moved.",
+    "cta": "Back to home"
+  },
+  "loading": "Loading"
+}

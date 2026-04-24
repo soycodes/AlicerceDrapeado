@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base resets ─────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply font-body text-dark-900 bg-light-100 antialiased;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  }
+
+  ::selection {
+    @apply bg-gold-500 text-white;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+/* ─── Component layer ─────────────────────────────────────── */
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center gap-3 px-8 py-4 bg-gold-500 text-white font-body font-medium text-sm tracking-widest uppercase
+      hover:bg-gold-600 transition-all duration-300 relative overflow-hidden;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-3 px-8 py-4 border border-dark-900 text-dark-900 font-body font-medium text-sm tracking-widest uppercase
+      hover:bg-dark-900 hover:text-white transition-all duration-300;
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center gap-3 px-8 py-4 border border-white text-white font-body font-medium text-sm tracking-widest uppercase
+      hover:bg-white hover:text-dark-900 transition-all duration-300;
+  }
+
+  /* Section headings */
+  .section-label {
+    @apply text-gold-500 font-body text-xs font-semibold tracking-[0.3em] uppercase mb-4 flex items-center gap-3;
+  }
+
+  .section-label::before {
+    content: '';
+    @apply block w-8 h-px bg-gold-500;
+  }
+
+  .section-title {
+    @apply font-heading text-5xl md:text-6xl lg:text-7xl text-dark-900 leading-[0.95] tracking-tight;
+  }
+
+  .section-title-light {
+    @apply font-heading text-5xl md:text-6xl lg:text-7xl text-white leading-[0.95] tracking-tight;
+  }
+
+  /* Container */
+  .container-site {
+    @apply max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16;
+  }
+
+  /* Divider */
+  .divider {
+    @apply w-16 h-px bg-gold-500;
+  }
+
+  /* Input styles */
+  .input-field {
+    @apply w-full bg-transparent border-b border-dark-500 pb-3 pt-1 text-dark-900 font-body text-base
+      focus:outline-none focus:border-gold-500 transition-colors duration-300 placeholder:text-dark-500;
+  }
+
+  .input-field-light {
+    @apply w-full bg-transparent border-b border-white/30 pb-3 pt-1 text-white font-body text-base
+      focus:outline-none focus:border-gold-400 transition-colors duration-300 placeholder:text-white/40;
+  }
+
+  /* Card hover */
+  .card-hover {
+    @apply transition-all duration-500 hover:-translate-y-1;
+  }
+
+  /* Grain overlay */
+  .grain-overlay {
+    position: relative;
+  }
+
+  .grain-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+/* ─── Utility layer ───────────────────────────────────────── */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .writing-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  .clip-path-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  }
+}
+
+/* ─── Scroll bar ──────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f2ee;
+}
+::-webkit-scrollbar-thumb {
+  background: #c4922a;
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a97820;
+}
