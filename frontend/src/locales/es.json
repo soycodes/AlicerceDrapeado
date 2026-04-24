@@ -1,0 +1,170 @@
+{
+  "lang": "es",
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "cta": "Solicitar Presupuesto"
+  },
+  "hero": {
+    "label": "Construyendo Excelencia",
+    "line1": "Construimos",
+    "line2": "el Futuro",
+    "line3": "Contigo.",
+    "subtitle": "Más de 20 años de experiencia en obras residenciales, comerciales e industriales. Calidad, seguridad y puntualidad en cada entrega.",
+    "btnProjects": "Ver Proyectos",
+    "btnQuote": "Solicitar Presupuesto",
+    "founded": "Fundada en",
+    "scroll": "Scroll",
+    "stats": {
+      "projects": "Proyectos Entregados",
+      "experience": "Años de Experiencia",
+      "satisfaction": "Clientes Satisfechos",
+      "awards": "Premios y Certificaciones"
+    }
+  },
+  "about": {
+    "label": "Quiénes somos",
+    "title1": "Construyendo",
+    "title2": "legados",
+    "title3": "hace dos décadas.",
+    "p1": "Fundada en 2004, Edifica nació con un propósito claro: entregar obras que resistan el tiempo, con la excelencia técnica y el cuidado humano que cada cliente merece.",
+    "p2": "Nuestro equipo multidisciplinar — ingenieros, arquitectos y gestores de obras — trabaja de forma integrada para que cada proyecto sea ejecutado con seguridad, calidad y dentro del plazo.",
+    "badge": "Años de experiencia",
+    "cta": "Conoce Nuestra Historia",
+    "differentials": [
+      "ISO 9001 — Gestión de Calidad",
+      "Equipo técnico especializado",
+      "Entrega en plazo garantizada",
+      "Transparencia en cada etapa"
+    ]
+  },
+  "services": {
+    "label": "Lo que hacemos",
+    "title1": "Soluciones completas",
+    "title2": "en construcción.",
+    "subtitle": "De la concepción a la entrega, ofrecemos servicios integrados para cada etapa de su proyecto.",
+    "ctaAll": "Ver todos los servicios",
+    "items": [
+      { "title": "Construcción Residencial", "desc": "Casas y apartamentos diseñados para su estilo de vida, con materiales de alta durabilidad y acabados premium." },
+      { "title": "Obras Comerciales", "desc": "Oficinas, tiendas y edificios corporativos entregados con eficiencia y dentro de los más altos estándares técnicos." },
+      { "title": "Proyectos Industriales", "desc": "Naves, centros logísticos e instalaciones industriales con foco en seguridad operacional y practicidad." },
+      { "title": "Reformas y Retrofit", "desc": "Revitalización de espacios existentes, modernizando sin perder la identidad original de la edificación." },
+      { "title": "Gestión de Obras", "desc": "Coordinación completa de su proyecto: cronograma, presupuesto, calidad y conformidad en cada fase." },
+      { "title": "Consultoría Técnica", "desc": "Informes, inspecciones y dictámenes técnicos por ingenieros certificados para apoyar sus decisiones." }
+    ]
+  },
+  "projects": {
+    "label": "Portafolio",
+    "title1": "Obras que",
+    "title2": "hablan",
+    "title3": "por sí solas.",
+    "ctaAll": "Ver todos los proyectos",
+    "filters": {
+      "all": "Todos",
+      "residential": "Residencial",
+      "commercial": "Comercial",
+      "industrial": "Industrial"
+    },
+    "details": {
+      "location": "Ubicación",
+      "year": "Año",
+      "area": "Área",
+      "close": "Cerrar"
+    }
+  },
+  "differentials": {
+    "label": "Diferenciales",
+    "title1": "¿Por qué elegir",
+    "title2": "Edifica?",
+    "subtitle": "Nuestra metodología va más allá de la técnica. Es sobre compromiso con las personas y el resultado.",
+    "ctaTitle": "¿Listo para empezar",
+    "ctaTitle2": "su proyecto?",
+    "ctaSubtitle": "Hable con nuestro equipo y reciba un presupuesto personalizado.",
+    "ctaBtn": "Solicitar Presupuesto Gratis",
+    "items": [
+      { "title": "Seguridad Total", "desc": "Todos los sitios siguen rigurosamente las normas de seguridad vigentes y poseen certificación de seguridad laboral." },
+      { "title": "Puntualidad Garantizada", "desc": "Cumplimos plazos. Nuestro historial lo confirma: 97% de las obras entregadas en la fecha acordada." },
+      { "title": "Calidad Certificada", "desc": "Certificados ISO 9001, garantizando procesos y materiales dentro de los más altos estándares." },
+      { "title": "Equipo Experimentado", "desc": "Más de 150 profesionales dedicados — ingenieros, maestros de obras y especialistas técnicos." },
+      { "title": "Sostenibilidad", "desc": "Prácticas constructivas sostenibles, reducción de residuos y uso consciente de recursos naturales." },
+      { "title": "Transparencia", "desc": "Informes periódicos, acceso online al avance de la obra y reuniones mensuales de seguimiento." }
+    ]
+  },
+  "contact": {
+    "label": "Contáctenos",
+    "title1": "¿Construimos",
+    "title2": "juntos?",
+    "subtitle": "Póngase en contacto y nuestro equipo comercial responderá en hasta 24 horas con un presupuesto personalizado.",
+    "address": "Dirección",
+    "phone": "Teléfono",
+    "email": "Correo",
+    "hours": "Horario",
+    "hoursValue": "Lunes a Viernes: 8h – 18h",
+    "form": {
+      "name": "Nombre completo",
+      "namePlaceholder": "Su nombre",
+      "phoneField": "Teléfono / WhatsApp",
+      "phonePlaceholder": "+1 000 000 0000",
+      "emailField": "Correo electrónico",
+      "emailPlaceholder": "su@correo.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "Describa su proyecto o consulta...",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "privacy": "Sus datos están protegidos y nunca serán compartidos con terceros.",
+      "sendAnother": "Enviar nuevo mensaje",
+      "successTitle": "¡Mensaje enviado!",
+      "successDesc": "Recibimos su mensaje. Nuestro equipo le contactará en hasta 24 horas.",
+      "errors": {
+        "nameRequired": "El nombre es obligatorio",
+        "nameMin": "Mínimo 2 caracteres",
+        "nameMax": "Máximo 100 caracteres",
+        "phoneRequired": "El teléfono es obligatorio",
+        "phoneInvalid": "Teléfono inválido",
+        "emailRequired": "El correo es obligatorio",
+        "emailInvalid": "Correo inválido",
+        "emailMax": "Correo demasiado largo",
+        "messageRequired": "El mensaje es obligatorio",
+        "messageMin": "Mínimo 10 caracteres",
+        "messageMax": "Máximo 2000 caracteres"
+      }
+    }
+  },
+  "footer": {
+    "company": "Empresa",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "tagline": "Construyendo excelencia desde hace más de 20 años. Cada proyecto es tratado con dedicación y compromiso con la calidad.",
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "servicesList": [
+      "Construcción Residencial",
+      "Obras Comerciales",
+      "Reformas y Retrofit",
+      "Gestión de Obras",
+      "Proyectos Industriales"
+    ]
+  },
+  "seo": {
+    "homeTitle": "Edifica Constructora | Construyendo Sueños con Excelencia",
+    "homeDesc": "Edifica Constructora — 20 años de excelencia en obras residenciales, comerciales e industriales.",
+    "aboutTitle": "Nosotros",
+    "aboutDesc": "Conozca la historia de Edifica Constructora — 20 años construyendo con excelencia.",
+    "servicesTitle": "Servicios",
+    "servicesDesc": "Obras residenciales, comerciales, industriales, reformas, gestión y consultoría técnica.",
+    "projectsTitle": "Proyectos",
+    "projectsDesc": "Portafolio de obras entregadas con excelencia.",
+    "contactTitle": "Contacto",
+    "contactDesc": "Póngase en contacto y solicite un presupuesto gratuito para su proyecto."
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "desc": "La dirección que accedió no existe o fue movida.",
+    "cta": "Volver al inicio"
+  },
+  "loading": "Cargando"
+}
