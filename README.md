@@ -75,7 +75,7 @@ npm run dev
 ```env
 RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 MAIL_TO=seu@email.com.br
-MAIL_FROM=Edifica Construtora <noreply@seudominio.com>
+MAIL_FROM=Alicerce Drapeado Construtora <noreply@seudominio.com>
 ```
 
 > **Domínio personalizado**: Em produção, verifique seu domínio em Resend → Domains.
@@ -141,7 +141,7 @@ MAIL_FROM=Edifica Construtora <noreply@seudominio.com>
 Cada página renderiza automaticamente:
 ```html
 <html lang="pt-BR">
-<link rel="canonical" href="https://www.construtoraedifica.com.br/pt-br/sobre" />
+<link rel="canonical" href="https://www.alicercedrapeado.com/pt-br/sobre" />
 <link rel="alternate" hreflang="pt-BR" href=".../pt-br/sobre" />
 <link rel="alternate" hreflang="pt-PT" href=".../pt/sobre" />
 <link rel="alternate" hreflang="es"    href=".../es/sobre" />
@@ -165,8 +165,8 @@ cd frontend && npm run build
 # Variáveis de ambiente no painel:
 RESEND_API_KEY=re_xxx
 MAIL_TO=seu@email.com
-MAIL_FROM=Edifica <noreply@seudominio.com>
-ALLOWED_ORIGINS=https://www.construtoraedifica.com.br
+MAIL_FROM=Alicerce Drapeado <noreply@seudominio.com>
+ALLOWED_ORIGINS=https://www.alicercedrapeado.com
 NODE_ENV=production
 ```
 
