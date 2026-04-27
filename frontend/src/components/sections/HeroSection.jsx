@@ -13,11 +13,11 @@ export default function HeroSection() {
     { num: '+200', label: t('hero.stats.projects') },
     { num: '+20',  label: t('hero.stats.experience') },
     { num: '98%',  label: t('hero.stats.satisfaction') },
-    { num: '+15',  label: t('hero.stats.awards') },
+    // { num: '+15',  label: t('hero.stats.awards') },
   ]
 
   return (
-    <section className="relative h-screen min-h-[700px] flex items-end overflow-hidden grain-overlay" aria-label="Hero — Edifica Construtora">
+    <section className="relative h-screen min-h-[700px] flex items-end overflow-hidden grain-overlay" aria-label="Hero — Alicerce Drapeado">
       <div className="absolute inset-0 z-0">
         <img src={HERO_IMAGE} alt="Edifícios modernos"
           className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
@@ -84,7 +84,7 @@ export default function HeroSection() {
           className="flex flex-wrap items-center gap-10 mt-16 pt-10 border-t border-white/10"
         >
           {stats.map((stat) => (
-            <div key={stat.label} className="flex flex-col gap-1">
+            <div key={stat.label} className="flex flex-col gap-1 flex-1">
               <span className="font-heading text-3xl text-gold-400 font-300">{stat.num}</span>
               <span className="font-body text-xs text-white/40 tracking-wider uppercase">{stat.label}</span>
             </div>

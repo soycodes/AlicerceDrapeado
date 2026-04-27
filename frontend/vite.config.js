@@ -2,8 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import sitemap from 'vite-plugin-sitemap'
 
-const BASE = 'https://www.construtoraedifica.com.br'
-const LANGS = ['pt-br', 'pt', 'es', 'en']
+const BASE = 'https://www.alicercedrapeado.com'
+const LANGS = ['pt','en','es','pt-br']
 const PAGES = ['', '/sobre', '/servicos', '/projetos', '/contato']
 
 // Generate all localised routes for sitemap

@@ -45,7 +45,7 @@ function LanguageRoute({ children }) {
  */
 function RootRedirect() {
   const { i18n } = useTranslation()
-  const lang = i18n.language || DEFAULT_LANGUAGE
+  const lang = DEFAULT_LANGUAGE
   return <Navigate to={`/${lang}`} replace />
 }
 

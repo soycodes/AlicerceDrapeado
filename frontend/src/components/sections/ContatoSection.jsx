@@ -14,12 +14,30 @@ export default function ContatoSection() {
 
   const { register, handleSubmit, reset, formState: { errors } } = useForm({ mode: 'onBlur' })
 
-  const contactInfo = [
-    { icon: MapPin, label: t('contact.address'), value: 'Av. Paulista, 1000 — São Paulo, SP' },
-    { icon: Phone,  label: t('contact.phone'),   value: '(11) 9999-0000', href: 'tel:+551199990000' },
-    { icon: Mail,   label: t('contact.email'),   value: 'contato@construtoraedifica.com.br', href: 'mailto:contato@construtoraedifica.com.br' },
-    { icon: Clock,  label: t('contact.hours'),   value: t('contact.hoursValue') },
-  ]
+const contactInfo = [
+  { 
+    icon: MapPin, 
+    label: t('contact.address'), 
+    value: 'Rua do Alto Alentejo, nº 183, 1ºDto — 2870-301 Montijo, Setúbal' 
+  },
+  { 
+    icon: Phone,  
+    label: t('contact.phone'),   
+    value: '+351 926 502 295', 
+    href: 'tel:+351926502295' 
+  },
+  { 
+    icon: Mail,   
+    label: t('contact.email'),   
+    value: 'contato@alicercedrapeado.com', 
+    href: 'mailto:contato@alicercedrapeado.com' 
+  },
+  // { 
+  //   icon: Clock,  
+  //   label: t('contact.hours'),   
+  //   value: t('contact.hoursValue') 
+  // },
+]
 
   const onSubmit = async (data) => {
     if (data.website) return

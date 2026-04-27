@@ -17,7 +17,7 @@ export default function SobrePreviewSection() {
 
           <AnimatedSection animation="slideRight" className="relative">
             <div className="relative aspect-[4/5] overflow-hidden">
-              <img src={ABOUT_IMAGE} alt="Equipe da Edifica" className="w-full h-full object-cover" loading="lazy" />
+              <img src={ABOUT_IMAGE} alt="Equipe da Alicerce Drapeado" className="w-full h-full object-cover" loading="lazy" />
               <div className="absolute -bottom-6 -right-6 w-48 h-48 border border-gold-500/30 -z-10" aria-hidden="true" />
             </div>
             <div className="absolute -bottom-4 left-8 bg-dark-900 text-white px-8 py-6 shadow-2xl" aria-hidden="true">

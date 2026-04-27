@@ -5,7 +5,7 @@
  *  • 4 idiomas: pt-BR, pt, es, en
  *  • Detecção automática pelo path da URL (/pt-br, /pt, /es, /en)
  *  • Persistência no localStorage
- *  • Fallback para pt-BR
+ *  • Fallback para pt
  *  • Sem texto hardcoded nos componentes
  * ─────────────────────────────────────────────────────────────────
  */
@@ -20,13 +20,13 @@ import en   from './locales/en.json'
 
 // ─── Suported locales ─────────────────────────────────────────────
 export const SUPPORTED_LANGUAGES = [
-  { code: 'pt-br', label: 'PT-BR', flag: '🇧🇷', full: 'Português (BR)' },
   { code: 'pt',    label: 'PT',    flag: '🇵🇹', full: 'Português (PT)' },
-  { code: 'es',    label: 'ES',    flag: '🇪🇸', full: 'Español' },
   { code: 'en',    label: 'EN',    flag: '🇺🇸', full: 'English' },
+  { code: 'es',    label: 'ES',    flag: '🇪🇸', full: 'Español' },
+  { code: 'pt-br', label: 'PT-BR', flag: '🇧🇷', full: 'Português (BR)' },
 ]
 
-export const DEFAULT_LANGUAGE = 'pt-br'
+export const DEFAULT_LANGUAGE = 'pt'
 
 /**
  * Reads the current language from the URL prefix.
@@ -41,7 +41,7 @@ export function getLangFromPath(pathname = window.location.pathname) {
  * Returns the persisted language from localStorage, if valid.
  */
 function getStoredLanguage() {
-  const stored = localStorage.getItem('edifica_lang')
+  const stored = localStorage.getItem('alicerce_drapeado_lang')
   return SUPPORTED_LANGUAGES.find(l => l.code === stored)?.code ?? null
 }
 
@@ -74,10 +74,10 @@ i18n
   .use(initReactI18next)
   .init({
     resources: {
-      'pt-br': { translation: ptBR },
       'pt':    { translation: pt   },
-      'es':    { translation: es   },
       'en':    { translation: en   },
+      'es':    { translation: es   },
+      'pt-BR': { translation: ptBR },
     },
     lng:            detectLanguage(),
     fallbackLng:    DEFAULT_LANGUAGE,
@@ -94,7 +94,7 @@ export function changeLanguage(langCode, navigate, currentPath) {
   if (!lang) return
 
   i18n.changeLanguage(langCode)
-  localStorage.setItem('edifica_lang', langCode)
+  localStorage.setItem('alicerce_drapeado_lang', langCode)
 
   // Rebuild URL: strip current lang prefix, add new one
   const withoutPrefix = stripLangPrefix(currentPath)

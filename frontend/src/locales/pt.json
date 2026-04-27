@@ -4,7 +4,7 @@
     "home": "Início",
     "about": "Sobre",
     "services": "Serviços",
-    "projects": "Projetos",
+    "projects": "Projectos",
     "contact": "Contacto",
     "cta": "Pedir Orçamento"
   },
@@ -30,7 +30,7 @@
     "title1": "Construindo",
     "title2": "legados",
     "title3": "há duas décadas.",
-    "p1": "Fundada em 2004, a Edifica nasceu com um propósito claro: entregar obras que resistam ao tempo, com a excelência técnica e o cuidado humano que cada cliente merece.",
+    "p1": "Fundada em 2004, a Alicerce Drapeado nasceu com um propósito claro: entregar obras que resistam ao tempo, com a excelência técnica e o cuidado humano que cada cliente merece.",
     "p2": "A nossa equipa multidisciplinar — engenheiros, arquitectos e gestores de obras — trabalha de forma integrada para que cada projecto seja executado com segurança, qualidade e dentro do prazo.",
     "badge": "Anos de experiência",
     "cta": "Conheça a Nossa História",
@@ -78,7 +78,7 @@
   "differentials": {
     "label": "Diferenciais",
     "title1": "Por que escolher",
-    "title2": "a Edifica?",
+    "title2": "a Alicerce Drapeado?",
     "subtitle": "A nossa metodologia vai além da técnica. É sobre compromisso com as pessoas e com o resultado.",
     "ctaTitle": "Pronto para começar",
     "ctaTitle2": "o seu projecto?",
@@ -150,10 +150,10 @@
     ]
   },
   "seo": {
-    "homeTitle": "Edifica Construtora | Construindo Sonhos com Excelência",
-    "homeDesc": "Edifica Construtora — 20 anos de excelência em obras residenciais, comerciais e industriais.",
+    "homeTitle": "Alicerce Drapeado | Construindo Sonhos com Excelência",
+    "homeDesc": "Alicerce Drapeado — 20 anos de excelência em obras residenciais, comerciais e industriais.",
     "aboutTitle": "Sobre Nós",
-    "aboutDesc": "Conheça a história da Edifica Construtora — 20 anos a construir com excelência.",
+    "aboutDesc": "Conheça a história da Alicerce Drapeado — 20 anos a construir com excelência.",
     "servicesTitle": "Serviços",
     "servicesDesc": "Obras residenciais, comerciais, industriais, remodelações, gestão e consultoria técnica.",
     "projectsTitle": "Projectos",

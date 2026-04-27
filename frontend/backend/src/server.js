@@ -1,5 +1,5 @@
 /**
- * server.js — Entry point do backend Edifica Construtora
+ * server.js — Entry point do backend Alicerce Drapeado Construtora
  * Express + Nodemailer com segurança, rate limiting e validação.
  */
 
@@ -72,7 +72,7 @@ app.use((err, _req, res, _next) => {
 
 // ─── Start ────────────────────────────────────────────────────────
 app.listen(PORT, () => {
-  console.log(`✅ Backend Edifica rodando em http://localhost:${PORT}`)
+  console.log(`✅ Backend Alicerce Drapeado rodando em http://localhost:${PORT}`)
   console.log(`   Ambiente: ${process.env.NODE_ENV || 'development'}`)
   console.log(`   SMTP: ${process.env.SMTP_HOST}:${process.env.SMTP_PORT}`)
 })

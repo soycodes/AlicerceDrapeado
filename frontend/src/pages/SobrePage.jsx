@@ -6,7 +6,7 @@ import SEOHead from '../hooks/useSEO'
 import AnimatedSection from '../components/ui/AnimatedSection'
 
 const timeline = [
-  { ano: '2004', titulo: 'Fundação',             desc: 'Nasce a Edifica Construtora com foco em obras residenciais na Grande São Paulo.' },
+  { ano: '2004', titulo: 'Fundação',             desc: 'Nasce a Alicerce Drapeado Construtora com foco em obras residenciais na Grande São Paulo.' },
   { ano: '2008', titulo: 'Expansão Comercial',   desc: 'Entrada no segmento comercial com a entrega do primeiro centro empresarial.' },
   { ano: '2012', titulo: 'Certificação ISO 9001', desc: 'Conquistamos a certificação de qualidade, elevando nossos processos ao padrão internacional.' },
   { ano: '2016', titulo: 'Projetos Industriais', desc: 'Início das operações em galpões logísticos e complexos industriais.' },
@@ -35,7 +35,7 @@ export default function SobrePage() {
 
       <section className="relative h-[55vh] min-h-[400px] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <img src={HERO_IMG} alt="Equipe Edifica" className="w-full h-full object-cover" />
+          <img src={HERO_IMG} alt="Equipe Alicerce Drapeado" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/50 to-dark-900/30" />
         </div>
         <div className="container-site relative z-10 pb-16">
@@ -64,7 +64,7 @@ export default function SobrePage() {
             </AnimatedSection>
             <AnimatedSection animation="slideLeft" delay={0.15}>
               <div className="relative aspect-[4/5] overflow-hidden">
-                <img src={TEAM_IMG} alt="Time da Edifica" className="w-full h-full object-cover" loading="lazy" />
+                <img src={TEAM_IMG} alt="Time da Alicerce Drapeado" className="w-full h-full object-cover" loading="lazy" />
                 <div className="absolute -bottom-4 -left-4 w-32 h-32 border border-gold-500/30" aria-hidden="true" />
               </div>
             </AnimatedSection>

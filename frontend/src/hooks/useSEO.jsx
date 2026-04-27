@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { SUPPORTED_LANGUAGES } from '../i18n'
 
-const BASE_URL = 'https://www.construtoraedifica.com.br'
+const BASE_URL = 'https://www.alicercedrapeado.com'
 
 /**
  * @param {string} titleKey   - i18n key e.g. 'seo.homeTitle'

@@ -25,7 +25,7 @@ function buildHTML({ nome, email, telefone, mensagem }) {
 <tr><td align="center">
 <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;background:#fff;box-shadow:0 4px 40px rgba(0,0,0,0.08);">
   <tr><td style="background:#0c0c0b;padding:36px 48px;">
-    <span style="font-family:Georgia,serif;font-size:28px;color:#fff;font-weight:700;">EDIFICA</span>
+    <span style="font-family:Georgia,serif;font-size:28px;color:#fff;font-weight:700;">Alicerce Drapeado</span>
     <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#c4922a;vertical-align:top;margin-left:3px;margin-top:6px;"></span>
     <p style="margin:8px 0 0;font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:3px;text-transform:uppercase;">Construtora</p>
   </td></tr>
@@ -63,7 +63,7 @@ function buildHTML({ nome, email, telefone, mensagem }) {
   <tr><td style="background:#0c0c0b;padding:28px 48px;text-align:center;">
     <p style="margin:0;font-size:11px;color:rgba(255,255,255,0.25);line-height:1.7;">
       Mensagem enviada via formulário do site.<br/>
-      Edifica Construtora &middot; Av. Paulista, 1000 &middot; São Paulo, SP &middot; CREA SP 000000-0
+      Alicerce Drapeado &middot; Rua do Alto Alentejo, nº 183, 1ºDto &middot; Montijo, Setúbal &middot;
     </p>
   </td></tr>
 </table>
@@ -72,7 +72,7 @@ function buildHTML({ nome, email, telefone, mensagem }) {
 }
 
 function buildText({ nome, email, telefone, mensagem }) {
-  return `EDIFICA CONSTRUTORA — Nova mensagem\n${'='.repeat(40)}\nNome: ${nome}\nE-mail: ${email}\nTelefone: ${telefone}\n\nMensagem:\n${mensagem}\n\n--\nEdifica Construtora · São Paulo, SP`
+  return `Alicerce Drapeado  — Nova mensagem\n${'='.repeat(40)}\nNome: ${nome}\nE-mail: ${email}\nTelefone: ${telefone}\n\nMensagem:\n${mensagem}\n\n--\nAlicerce Drapeado · Montijo, Setúbal`
 }
 
 /**
@@ -82,13 +82,13 @@ export async function sendContactEmail(data) {
   if (!process.env.MAIL_TO) throw new Error('[MAILER] MAIL_TO não definido no .env')
 
   const { data: result, error } = await resend.emails.send({
-    from:    process.env.MAIL_FROM || 'Edifica Construtora <onboarding@resend.dev>',
+    from:    process.env.MAIL_FROM || 'Alicerce Drapeado <onboarding@resend.dev>',
     to:      [process.env.MAIL_TO],
     replyTo: data.email,
-    subject: `[Edifica] Nova mensagem de ${data.nome}`,
+    subject: `[Alicerce Drapeado] Nova mensagem de ${data.nome}`,
     html:    buildHTML(data),
     text:    buildText(data),
-    headers: { 'X-Source': 'edifica-contact-form' },
+    headers: { 'X-Source': 'alicerce-Drapeado-contact-form' },
   })
 
   if (error) {

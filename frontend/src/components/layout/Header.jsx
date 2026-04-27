@@ -49,7 +49,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20 md:h-24">
 
           {/* Logo */}
-          <Link to={`/${lang}`} className="flex items-center gap-3 group" aria-label="Edifica Construtora">
+          <Link to={`/${lang}`} className="flex items-center gap-3 group" aria-label="Alicerce Drapeado Construtora">
             <div className="flex items-end gap-0.5">
               <span className="font-heading text-3xl font-700 text-white leading-none tracking-tight">
                 ALICERCE
@@ -82,11 +82,11 @@ export default function Header() {
           {/* Right side */}
           <div className="flex items-center gap-3">
             <a
-              href="tel:+551199990000"
+              href="tel:+351926502295"
               className="hidden md:flex items-center gap-2 text-white/60 hover:text-gold-400 transition-colors duration-200 font-body text-sm"
             >
               <Phone size={14} />
-              <span>(11) 9999-0000</span>
+              <span>(351) 926 502 295</span>
             </a>
 
             {/* Language switcher */}
@@ -139,8 +139,8 @@ export default function Header() {
                 </motion.div>
               ))}
               <div className="pt-4 border-t border-white/10 flex flex-col gap-4">
-                <a href="tel:+551199990000" className="text-white/50 font-body text-sm flex items-center gap-2">
-                  <Phone size={14} /> (11) 9999-0000
+                <a href="tel:+351926502295" className="text-white/50 font-body text-sm flex items-center gap-2">
+                  <Phone size={14} /> (351) 926 502 295
                 </a>
                 <div className="flex items-center gap-4">
                   <LanguageSwitcher variant="light" />
