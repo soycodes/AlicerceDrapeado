@@ -101,6 +101,7 @@
     "address": "Dirección",
     "phone": "Teléfono",
     "email": "Correo",
+    "location": "Ubicación del inmueble",
     "hours": "Horario",
     "hoursValue": "Lunes a Viernes: 8h – 18h",
     "form": {
@@ -110,6 +111,22 @@
       "phonePlaceholder": "+1 000 000 0000",
       "emailField": "Correo electrónico",
       "emailPlaceholder": "su@correo.com",
+      "locationField": "Ubicación del inmueble",
+      "locationPlaceholder": "Calle, número, barrio, ciudad, estado",
+      "propertyTypeField": "Tipo de inmueble",
+      "serviceField": "Servicios",
+      "selectPlaceholder": "Seleccione…",
+      "propertyTypeOptions": {
+        "Residencial": "Residencial",
+        "Comercial": "Comercial",
+        "Escritorio": "Oficina"
+      },
+      "serviceOptions": {
+        "Arquitetura & Engenharia": "Arquitectura e ingeniería",
+        "Interiores": "Interiores",
+        "Construção civil": "Construcción civil",
+        "Outros serviços": "Otros servicios"
+      },
       "message": "Mensaje",
       "messagePlaceholder": "Describa su proyecto o consulta...",
       "submit": "Enviar Mensaje",
@@ -127,6 +144,11 @@
         "emailRequired": "El correo es obligatorio",
         "emailInvalid": "Correo inválido",
         "emailMax": "Correo demasiado largo",
+        "locationRequired": "La ubicación es obligatoria",
+        "locationMin": "Mínimo 10 caracteres",
+        "locationMax": "Máximo 200 caracteres",
+        "propertyTypeRequired": "Seleccione el tipo de inmueble",
+        "serviceRequired": "Seleccione un servicio",
         "messageRequired": "El mensaje es obligatorio",
         "messageMin": "Mínimo 10 caracteres",
         "messageMax": "Máximo 2000 caracteres"

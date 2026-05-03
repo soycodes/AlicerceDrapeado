@@ -96,6 +96,24 @@
       focus:outline-none focus:border-gold-400 transition-colors duration-300 placeholder:text-white/40;
   }
 
+  /* Used inside an underline wrapper; strips OS select chrome (Edge/Windows need ::-ms-expand) */
+  .select-underline-field {
+    @apply w-full bg-transparent border-0 pb-3 pt-1 font-body text-base cursor-pointer rounded-none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  /* Ensure native select dropdown options have readable contrast */
+  .select-underline-field option {
+    color: rgba(255, 255, 255, 0.4);
+    background-color: #0c0c0b;
+  }
+
+  .select-underline-field option[value=""] {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
   /* Card hover */
   .card-hover {
     @apply transition-all duration-500 hover:-translate-y-1;

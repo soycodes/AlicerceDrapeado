@@ -8,7 +8,7 @@ const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001'
 
 /**
  * Sends the contact form data to the backend.
- * @param {{ nome: string, email: string, telefone: string, mensagem: string }} data
+ * @param {{ nome: string, email: string, telefone: string, location: string, tipoImovel: string, servico: string, mensagem: string }} data
  * @returns {Promise<void>}
  * @throws {Error} with a user-friendly message
  */

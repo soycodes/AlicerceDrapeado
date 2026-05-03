@@ -100,7 +100,8 @@
     "subtitle": "Entre em contacto e a nossa equipa comercial responderá em até 24 horas com um orçamento personalizado.",
     "address": "Endereço",
     "phone": "Telefone",
-    "email": "E-mail",
+    "email": "E-mail",  
+    "location": "Localização do imóvel",
     "hours": "Horário",
     "hoursValue": "Segunda a Sexta: 8h – 18h",
     "form": {
@@ -110,8 +111,24 @@
       "phonePlaceholder": "+351 900 000 000",
       "emailField": "E-mail",
       "emailPlaceholder": "o.seu@email.com",
+      "locationField": "Localização do imóvel",
+      "locationPlaceholder": "Morada, número, localidade, cidade",
+      "propertyTypeField": "Tipo de imóvel",
+      "serviceField": "Serviços",
+      "selectPlaceholder": "Selecione…",
+      "propertyTypeOptions": {
+        "Residencial": "Residencial",
+        "Comercial": "Comercial",
+        "Escritorio": "Escritorio"
+      },
+      "serviceOptions": {
+        "Arquitetura & Engenharia": "Arquitetura & Engenharia",
+        "Interiores": "Interiores",
+        "Construção civil": "Construção civil",
+        "Outros serviços": "Outros serviços"
+      },
       "message": "Mensagem",
-      "messagePlaceholder": "Descreva o seu projecto ou dúvida...",
+      "messagePlaceholder": "Qual a área de intervenção pretendida?",
       "submit": "Enviar Mensagem",
       "sending": "A enviar...",
       "privacy": "Os seus dados são protegidos e nunca serão partilhados com terceiros.",
@@ -127,6 +144,11 @@
         "emailRequired": "E-mail é obrigatório",
         "emailInvalid": "E-mail inválido",
         "emailMax": "E-mail demasiado longo",
+        "locationRequired": "Localização é obrigatória",
+        "locationMin": "Mínimo 10 caracteres",
+        "locationMax": "Máximo 200 caracteres",
+        "propertyTypeRequired": "Seleccione o tipo de imóvel",
+        "serviceRequired": "Seleccione um serviço",
         "messageRequired": "Mensagem é obrigatória",
         "messageMin": "Mínimo 10 caracteres",
         "messageMax": "Máximo 2000 caracteres"

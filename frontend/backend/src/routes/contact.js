@@ -10,6 +10,14 @@ import { sanitizeInput } from '../utils/sanitize.js'
 
 export const contactRouter = Router()
 
+const PROPERTY_TYPES = ['Residencial', 'Comercial', 'Escritorio']
+const SERVICE_TYPES = [
+  'Arquitetura & Engenharia',
+  'Interiores',
+  'Construção civil',
+  'Outros serviços',
+]
+
 // ─── Validation rules ─────────────────────────────────────────────
 const contactValidation = [
   body('nome')
@@ -29,6 +37,21 @@ const contactValidation = [
     .trim()
     .notEmpty().withMessage('Telefone é obrigatório.')
     .matches(/^[\d\s()\-+]{8,20}$/).withMessage('Telefone inválido.'),
+
+  body('location')
+    .trim()
+    .notEmpty().withMessage('Localização é obrigatória.')
+    .isLength({ min: 10, max: 200 }).withMessage('Localização deve ter entre 10 e 200 caracteres.'),
+
+  body('tipoImovel')
+    .trim()
+    .notEmpty().withMessage('Tipo de imóvel é obrigatório.')
+    .isIn(PROPERTY_TYPES).withMessage('Tipo de imóvel inválido.'),
+
+  body('servico')
+    .trim()
+    .notEmpty().withMessage('Serviço é obrigatório.')
+    .isIn(SERVICE_TYPES).withMessage('Serviço inválido.'),
 
   body('mensagem')
     .trim()
@@ -72,10 +95,13 @@ contactRouter.post(
 
     // Sanitize data before sending
     const data = {
-      nome:     sanitizeInput(req.body.nome),
-      email:    sanitizeInput(req.body.email),
-      telefone: sanitizeInput(req.body.telefone),
-      mensagem: sanitizeInput(req.body.mensagem),
+      nome:        sanitizeInput(req.body.nome),
+      email:       sanitizeInput(req.body.email),
+      telefone:    sanitizeInput(req.body.telefone),
+      location:    sanitizeInput(req.body.location).slice(0, 200),
+      tipoImovel:  req.body.tipoImovel.trim(),
+      servico:     req.body.servico.trim(),
+      mensagem:    sanitizeInput(req.body.mensagem),
     }
 
     try {

@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useForm } from 'react-hook-form'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Send, CheckCircle, AlertCircle, Loader2, MapPin, Phone, Mail, Clock } from 'lucide-react'
+import { Send, CheckCircle, AlertCircle, Loader2, MapPin, Phone, Mail, ChevronDown } from 'lucide-react'
 import DOMPurify from 'dompurify'
 import { useTranslation } from 'react-i18next'
 import { sendContactForm } from '../../services/contactService'
@@ -9,10 +9,22 @@ import AnimatedSection from '../ui/AnimatedSection'
 
 export default function ContatoSection() {
   const { t } = useTranslation()
+
+  const propertyTypeOptions = useMemo(() => {
+    const opts = t('contact.form.propertyTypeOptions', { returnObjects: true })
+    return typeof opts === 'object' && opts !== null && !Array.isArray(opts) ? opts : {}
+  }, [t])
+
+  const serviceOptions = useMemo(() => {
+    const opts = t('contact.form.serviceOptions', { returnObjects: true })
+    return typeof opts === 'object' && opts !== null && !Array.isArray(opts) ? opts : {}
+  }, [t])
   const [status, setStatus]           = useState('idle')
   const [errorMessage, setErrorMessage] = useState('')
 
-  const { register, handleSubmit, reset, formState: { errors } } = useForm({ mode: 'onBlur' })
+  const { register, handleSubmit, reset, watch, formState: { errors } } = useForm({ mode: 'onBlur' })
+  const tipoImovelValue = watch('tipoImovel')
+  const servicoValue = watch('servico')
 
 const contactInfo = [
   { 
@@ -45,10 +57,13 @@ const contactInfo = [
     setErrorMessage('')
 
     const sanitized = {
-      nome:     DOMPurify.sanitize(data.nome.trim()),
-      email:    DOMPurify.sanitize(data.email.trim()),
-      telefone: DOMPurify.sanitize(data.telefone.trim()),
-      mensagem: DOMPurify.sanitize(data.mensagem.trim()),
+      nome:        DOMPurify.sanitize(data.nome.trim()),
+      email:       DOMPurify.sanitize(data.email.trim()),
+      telefone:    DOMPurify.sanitize(data.telefone.trim()),
+      location:    DOMPurify.sanitize(data.location.trim()),
+      tipoImovel:  data.tipoImovel,
+      servico:     data.servico,
+      mensagem:    DOMPurify.sanitize(data.mensagem.trim()),
     }
 
     try {
@@ -177,6 +192,90 @@ const contactInfo = [
                         <AlertCircle size={12} /> {errors.email.message}
                       </p>
                     )}
+                  </div>
+                  {/* localização */}
+                  <div>
+                    <label className="font-body text-[10px] text-white/40 tracking-widest uppercase block mb-2" htmlFor="localizacao">
+                      {t('contact.form.locationField')} *
+                    </label>
+                    <input id="localizacao" type="text" autoComplete="street-address"
+                      className={`input-field-light ${errors.location ? 'border-red-400' : ''}`}
+                      placeholder={t('contact.form.locationPlaceholder')}
+                      {...register('location', {
+                        required: t('contact.form.errors.locationRequired'),
+                        minLength: { value: 10, message: t('contact.form.errors.locationMin') },
+                        maxLength: { value: 200, message: t('contact.form.errors.locationMax') },
+                      })} />
+                    {errors.location && (
+                      <p className="font-body text-xs text-red-400 mt-2 flex items-center gap-1">
+                        <AlertCircle size={12} /> {errors.location.message}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+                    <div>
+                      <label className="font-body text-[10px] text-white/40 tracking-widest uppercase block mb-2" htmlFor="tipoImovel">
+                        {t('contact.form.propertyTypeField')} *
+                      </label>
+                      <div
+                        className={`flex items-end gap-2 border-b transition-colors duration-300 ${
+                          errors.tipoImovel
+                            ? 'border-red-400'
+                            : 'border-white/30 focus-within:border-gold-400'
+                        }`}
+                      >
+                        <select
+                          id="tipoImovel"
+                          className={`select-underline-field appearance-none flex-1 min-w-0 outline-none focus:outline-none focus:ring-0 bg-transparent ${tipoImovelValue ? 'text-white' : 'text-white/40'}`}
+                          {...register('tipoImovel', {
+                            required: t('contact.form.errors.propertyTypeRequired'),
+                          })}
+                        >
+                          <option value="">{t('contact.form.selectPlaceholder')}</option>
+                          {Object.keys(propertyTypeOptions).map((key) => (
+                            <option key={key} value={key}>{propertyTypeOptions[key]}</option>
+                          ))}
+                        </select>
+                        <ChevronDown className="mb-3 h-4 w-4 shrink-0 text-gold-400 pointer-events-none" aria-hidden />
+                      </div>
+                      {errors.tipoImovel && (
+                        <p className="font-body text-xs text-red-400 mt-2 flex items-center gap-1">
+                          <AlertCircle size={12} /> {errors.tipoImovel.message}
+                        </p>
+                      )}
+                    </div>
+                    <div>
+                      <label className="font-body text-[10px] text-white/40 tracking-widest uppercase block mb-2" htmlFor="servico">
+                        {t('contact.form.serviceField')} *
+                      </label>
+                      <div
+                        className={`flex items-end gap-2 border-b transition-colors duration-300 ${
+                          errors.servico
+                            ? 'border-red-400'
+                            : 'border-white/30 focus-within:border-gold-400'
+                        }`}
+                      >
+                        <select
+                          id="servico"
+                          className={`select-underline-field appearance-none flex-1 min-w-0 outline-none focus:outline-none focus:ring-0 bg-transparent ${servicoValue ? 'text-white' : 'text-white/40'}`}
+                          {...register('servico', {
+                            required: t('contact.form.errors.serviceRequired'),
+                          })}
+                        >
+                          <option value="">{t('contact.form.selectPlaceholder')}</option>
+                          {Object.keys(serviceOptions).map((key) => (
+                            <option key={key} value={key}>{serviceOptions[key]}</option>
+                          ))}
+                        </select>
+                        <ChevronDown className="mb-3 h-4 w-4 shrink-0 text-gold-400 pointer-events-none" aria-hidden />
+                      </div>
+                      {errors.servico && (
+                        <p className="font-body text-xs text-red-400 mt-2 flex items-center gap-1">
+                          <AlertCircle size={12} /> {errors.servico.message}
+                        </p>
+                      )}
+                    </div>
                   </div>
 
                   {/* Mensagem */}

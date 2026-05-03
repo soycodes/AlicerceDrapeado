@@ -101,6 +101,7 @@
     "address": "Address",
     "phone": "Phone",
     "email": "Email",
+    "location": "Property Location",
     "hours": "Business Hours",
     "hoursValue": "Monday to Friday: 8am – 6pm",
     "form": {
@@ -110,6 +111,22 @@
       "phonePlaceholder": "+1 000 000 0000",
       "emailField": "Email",
       "emailPlaceholder": "your@email.com",
+      "locationField": "Property Location",
+      "locationPlaceholder": "Street, number, neighborhood, city, state",
+      "propertyTypeField": "Property type",
+      "serviceField": "Services",
+      "selectPlaceholder": "Select…",
+      "propertyTypeOptions": {
+        "Residencial": "Residential",
+        "Comercial": "Commercial",
+        "Escritorio": "Office"
+      },
+      "serviceOptions": {
+        "Arquitetura & Engenharia": "Architecture & Engineering",
+        "Interiores": "Interiors",
+        "Construção civil": "Civil construction",
+        "Outros serviços": "Other services"
+      },
       "message": "Message",
       "messagePlaceholder": "Describe your project or inquiry...",
       "submit": "Send Message",
@@ -127,6 +144,11 @@
         "emailRequired": "Email is required",
         "emailInvalid": "Invalid email",
         "emailMax": "Email too long",
+        "locationRequired": "Location is required",
+        "locationMin": "Minimum 10 characters",
+        "locationMax": "Maximum 200 characters",
+        "propertyTypeRequired": "Select a property type",
+        "serviceRequired": "Select a service",
         "messageRequired": "Message is required",
         "messageMin": "Minimum 10 characters",
         "messageMax": "Maximum 2000 characters"

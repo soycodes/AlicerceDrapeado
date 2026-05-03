@@ -16,9 +16,25 @@ function escapeHtml(str) {
     .replace(/"/g, '&quot;').replace(/'/g, '&#039;')
 }
 
-function buildHTML({ nome, email, telefone, mensagem }) {
+const TIPO_IMOVEL_PT = {
+  Residencial: 'Residencial',
+  Comercial: 'Comercial',
+  Escritorio: 'Escritório',
+}
+
+const SERVICO_PT = {
+  'Arquitetura & Engenharia': 'Arquitetura & Engenharia',
+  Interiores: 'Interiores',
+  'Construção civil': 'Construção civil',
+  'Outros serviços': 'Outros serviços',
+}
+
+function buildHTML({ nome, email, telefone, location, tipoImovel, servico, mensagem }) {
   const n = escapeHtml(nome), e = escapeHtml(email)
   const t = escapeHtml(telefone), m = escapeHtml(mensagem).replace(/\n/g,'<br/>')
+  const loc = escapeHtml(location)
+  const tipo = escapeHtml(TIPO_IMOVEL_PT[tipoImovel] || tipoImovel)
+  const serv = escapeHtml(SERVICO_PT[servico] || servico)
   return `<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"/></head>
 <body style="margin:0;padding:0;background:#f4f2ee;font-family:Arial,sans-serif;">
 <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f2ee;padding:40px 20px;">
@@ -49,6 +65,18 @@ function buildHTML({ nome, email, telefone, mensagem }) {
         <td style="padding:14px 0;border-bottom:1px solid #f0ece4;"><span style="font-size:10px;color:#9a8167;letter-spacing:2px;text-transform:uppercase;font-weight:600;">Telefone</span></td>
         <td style="padding:14px 0;border-bottom:1px solid #f0ece4;"><a href="tel:${t}" style="font-size:15px;color:#0c0c0b;text-decoration:none;">${t}</a></td>
       </tr>
+      <tr>
+        <td style="padding:14px 0;border-bottom:1px solid #f0ece4;width:130px;"><span style="font-size:10px;color:#9a8167;letter-spacing:2px;text-transform:uppercase;font-weight:600;">Localização</span></td>
+        <td style="padding:14px 0;border-bottom:1px solid #f0ece4;"><span style="font-size:15px;color:#0c0c0b;font-weight:500;">${loc}</span></td>
+      </tr>
+      <tr>
+        <td style="padding:14px 0;border-bottom:1px solid #f0ece4;"><span style="font-size:10px;color:#9a8167;letter-spacing:2px;text-transform:uppercase;font-weight:600;">Tipo de imóvel</span></td>
+        <td style="padding:14px 0;border-bottom:1px solid #f0ece4;"><span style="font-size:15px;color:#0c0c0b;font-weight:500;">${tipo}</span></td>
+      </tr>
+      <tr>
+        <td style="padding:14px 0;border-bottom:1px solid #f0ece4;"><span style="font-size:10px;color:#9a8167;letter-spacing:2px;text-transform:uppercase;font-weight:600;">Serviço</span></td>
+        <td style="padding:14px 0;border-bottom:1px solid #f0ece4;"><span style="font-size:15px;color:#0c0c0b;font-weight:500;">${serv}</span></td>
+      </tr>
     </table>
   </td></tr>
   <tr><td style="padding:0 48px 40px;">
@@ -71,12 +99,14 @@ function buildHTML({ nome, email, telefone, mensagem }) {
 </body></html>`
 }
 
-function buildText({ nome, email, telefone, mensagem }) {
-  return `Alicerce Drapeado  — Nova mensagem\n${'='.repeat(40)}\nNome: ${nome}\nE-mail: ${email}\nTelefone: ${telefone}\n\nMensagem:\n${mensagem}\n\n--\nAlicerce Drapeado · Montijo, Setúbal`
+function buildText({ nome, email, telefone, location, tipoImovel, servico, mensagem }) {
+  const tipo = TIPO_IMOVEL_PT[tipoImovel] || tipoImovel
+  const serv = SERVICO_PT[servico] || servico
+  return `Alicerce Drapeado  — Nova mensagem\n${'='.repeat(40)}\nNome: ${nome}\nE-mail: ${email}\nTelefone: ${telefone}\nLocalização: ${location}\nTipo de imóvel: ${tipo}\nServiço: ${serv}\n\nMensagem:\n${mensagem}\n\n--\nAlicerce Drapeado · Montijo, Setúbal`
 }
 
 /**
- * @param {{ nome, email, telefone, mensagem }} data - já sanitizados
+ * @param {{ nome, email, telefone, location, tipoImovel, servico, mensagem }} data - já sanitizados
  */
 export async function sendContactEmail(data) {
   if (!process.env.MAIL_TO) throw new Error('[MAILER] MAIL_TO não definido no .env')
