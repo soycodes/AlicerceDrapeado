@@ -25,7 +25,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to={`/${lang}`} className="inline-flex items-center">
-              <img src={logo} alt="Alicerce Drapeado" className="w-full h-auto" />
+              <img src={logo} alt="Alicerce Drapeado" className="w-40 md:w-48 lg:w-full h-auto" />
             </Link>
           </div>
 

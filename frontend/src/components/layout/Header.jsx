@@ -29,9 +29,13 @@ export default function Header() {
   }, [])
 
   useEffect(() => {
+    handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [handleScroll])
+
+  // Re-evaluate on route change (scroll position resets on navigation)
+  useEffect(() => { handleScroll() }, [location, handleScroll])
 
   useEffect(() => { setMobileOpen(false) }, [location])
 
