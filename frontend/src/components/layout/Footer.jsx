@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
-import { MapPin, Phone, Mail, Instagram, Linkedin, ArrowUpRight } from 'lucide-react'
+import { MapPin, Phone, Mail, Instagram, ArrowUpRight } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import logo from '../../img/alicerce-logo-5-transparent.svg'
 
 export default function Footer() {
   const { t }              = useTranslation()
@@ -19,24 +20,27 @@ export default function Footer() {
   return (
     <footer className="bg-dark-900 text-white" role="contentinfo">
       <div className="container-site py-20 md:py-28">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 items-center">
 
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link to={`/${lang}`} className="inline-flex items-end gap-0.5 mb-6">
-              <span className="font-heading text-2xl font-700 text-white">ALICERCE DRAPEADO</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-gold-500 mb-0.5" aria-hidden="true" />
+            <Link to={`/${lang}`} className="inline-flex items-center">
+              <img src={logo} alt="Alicerce Drapeado" className="w-full h-auto" />
             </Link>
-            <p className="font-body text-white/50 text-sm leading-relaxed mb-8 max-w-xs">
-              {t('footer.tagline')}
-            </p>
-            <div className="flex items-center gap-4">
-              <a href="https://www.instagram.com/alicercedrapeado/" target="_blank" rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/50 hover:border-gold-500 hover:text-gold-400 transition-all duration-300"
-                aria-label="Instagram">
-                <Instagram size={15} />
-              </a>
-            </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="font-body text-xs font-600 tracking-[0.25em] uppercase text-white/40 mb-6">
+              {t('footer.services')}
+            </h3>
+            <ul className="space-y-3" role="list">
+              {Array.isArray(servicesList) && servicesList.map((item) => (
+                <li key={item}>
+                  <span className="font-body text-sm text-white/60">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Company links */}
@@ -52,20 +56,6 @@ export default function Footer() {
                     <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                     {link.label}
                   </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="font-body text-xs font-600 tracking-[0.25em] uppercase text-white/40 mb-6">
-              {t('footer.services')}
-            </h3>
-            <ul className="space-y-3" role="list">
-              {Array.isArray(servicesList) && servicesList.map((item) => (
-                <li key={item}>
-                  <span className="font-body text-sm text-white/60">{item}</span>
                 </li>
               ))}
             </ul>
@@ -93,6 +83,12 @@ export default function Footer() {
                 <Mail size={15} className="text-gold-500 flex-shrink-0" />
                 <a href="mailto:contato@alicercedrapeado.com" className="font-body text-sm text-white/60 hover:text-gold-400 transition-colors duration-200">
                   contato@alicercedrapeado.com
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Instagram size={15} className="text-gold-500 flex-shrink-0" />
+                <a href="https://www.instagram.com/alicercedrapeado/" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-white/60 hover:text-gold-400 transition-colors duration-200">
+                  @AlicerceDrapeado
                 </a>
               </div>
             </address>

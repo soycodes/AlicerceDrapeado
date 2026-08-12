@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Phone } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import LanguageSwitcher from '../ui/LanguageSwitcher'
+import logo from '../../img/alicerce-logo-1-transparent.svg'
 
 export default function Header() {
   const { t }        = useTranslation()
@@ -49,16 +50,8 @@ export default function Header() {
         <div className="flex items-center justify-between h-20 md:h-24">
 
           {/* Logo */}
-          <Link to={`/${lang}`} className="flex items-center gap-3 group" aria-label="Alicerce Drapeado Construtora">
-            <div className="flex items-end gap-0.5">
-              <span className="font-heading text-3xl font-700 text-white leading-none tracking-tight">
-                ALICERCE
-              </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-gold-500 mb-1 group-hover:scale-150 transition-transform duration-300" aria-hidden="true" />
-            </div>
-            <span className="hidden sm:block text-white/30 text-xs font-body tracking-[0.25em] uppercase leading-none border-l border-white/20 pl-3 mt-0.5">
-              DRAPEADO
-            </span>
+          <Link to={`/${lang}`} className="flex items-center group" aria-label="Alicerce Drapeado Construtora">
+            <img src={logo} alt="Alicerce Drapeado" className="h-12 md:h-14 w-auto group-hover:scale-105 transition-transform duration-300" />
           </Link>
 
           {/* Desktop nav */}
