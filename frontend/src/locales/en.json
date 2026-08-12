@@ -13,14 +13,13 @@
     "line1": "We Build",
     "line2": "the Future",
     "line3": "With You.",
-    "subtitle": "Over 20 years of experience in residential, commercial and industrial construction. Quality, safety and on-time delivery in every project.",
+    "subtitle": "We have a team of over 50 professionals dedicated to residential, commercial and industrial construction. Quality, safety and on-time delivery in every project.",
     "btnProjects": "View Projects",
     "btnQuote": "Request a Quote",
-    "founded": "Founded in",
     "scroll": "Scroll",
     "stats": {
       "projects": "Projects Delivered",
-      "experience": "Years of Experience",
+      "experience": "Team Members",
       "satisfaction": "Satisfied Clients",
       "awards": "Awards & Certifications"
     }
@@ -29,13 +28,13 @@
     "label": "Who we are",
     "title1": "Building",
     "title2": "legacies",
-    "title3": "for two decades.",
-    "p1": "Founded in 2004, Alicerce Drapeado was born with a clear purpose: to deliver construction projects that stand the test of time, with the technical excellence and human care that every client deserves.",
+    "title3": "",
+    "p1": "Alicerce Drapeado was born with a clear purpose: to deliver construction projects that stand the test of time, with the technical excellence and human care that every client deserves.",
     "p2": "Our multidisciplinary team — engineers, architects and project managers — works in an integrated way so every project is executed safely, with quality and on schedule.",
-    "badge": "Years of experience",
+    "badge": "Team Members",
     "cta": "Learn Our Story",
     "differentials": [
-      "ISO 9001 — Quality Management",
+      "Quality management at every stage",
       "Specialized technical team",
       "On-time delivery guaranteed",
       "Transparency at every stage"
@@ -87,8 +86,8 @@
     "items": [
       { "title": "Total Safety", "desc": "All sites rigorously follow applicable safety standards and hold occupational safety certifications." },
       { "title": "On-Time Delivery", "desc": "We meet deadlines. Our track record proves it: 97% of projects delivered on the agreed date." },
-      { "title": "Certified Quality", "desc": "ISO 9001 certified, ensuring processes and materials meet the highest standards." },
-      { "title": "Experienced Team", "desc": "Over 150 dedicated professionals — engineers, site managers and technical specialists." },
+      { "title": "Quality Standard", "desc": "Rigorous internal quality control processes, ensuring materials and execution meet the highest standards." },
+      { "title": "Experienced Team", "desc": "Over 50 dedicated professionals — engineers, site managers and technical specialists." },
       { "title": "Sustainability", "desc": "Sustainable building practices, waste reduction and conscious use of natural resources." },
       { "title": "Transparency", "desc": "Regular reports, online access to project progress and monthly follow-up meetings." }
     ]
@@ -159,7 +158,7 @@
     "company": "Company",
     "services": "Services",
     "contact": "Contact",
-    "tagline": "Building excellence for over 20 years. Every project is treated with dedication and commitment to quality.",
+    "tagline": "A team of over 50 professionals builds excellence into every project, with dedication and commitment to quality.",
     "rights": "All rights reserved.",
     "privacy": "Privacy",
     "terms": "Terms",
@@ -173,9 +172,9 @@
   },
   "seo": {
     "homeTitle": "Alicerce Drapeado | Building Dreams with Excellence",
-    "homeDesc": "Alicerce Drapeado — 20 years of excellence in residential, commercial and industrial construction.",
+    "homeDesc": "Alicerce Drapeado — 50+ team members committed to excellence in residential, commercial and industrial construction.",
     "aboutTitle": "About Us",
-    "aboutDesc": "Learn about Alicerce Drapeado's story — 20 years building with excellence and certified quality.",
+    "aboutDesc": "Learn about Alicerce Drapeado's story — a team of 50+ professionals building with excellence and certified quality.",
     "servicesTitle": "Services",
     "servicesDesc": "Residential, commercial, industrial, renovation, project management and consulting.",
     "projectsTitle": "Projects",

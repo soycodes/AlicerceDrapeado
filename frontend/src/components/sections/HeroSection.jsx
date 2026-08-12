@@ -1,23 +1,21 @@
-import { Link, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowDown, ArrowRight } from 'lucide-react'
+import { ArrowDown } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
 const HERO_IMAGE = 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80&auto=format&fit=crop'
 
 export default function HeroSection() {
-  const { t }              = useTranslation()
-  const { lang = 'pt-br' } = useParams()
+  const { t } = useTranslation()
 
   const stats = [
     { num: '+200', label: t('hero.stats.projects') },
-    { num: '+20',  label: t('hero.stats.experience') },
+    { num: '+50',  label: t('hero.stats.experience') },
     { num: '98%',  label: t('hero.stats.satisfaction') },
     // { num: '+15',  label: t('hero.stats.awards') },
   ]
 
   return (
-    <section className="relative h-screen min-h-[700px] flex items-end overflow-hidden grain-overlay" aria-label="Hero — Alicerce Drapeado">
+    <section className="relative h-screen min-h-[700px] flex items-end overflow-hidden grain-overlay pt-24" aria-label="Hero — Alicerce Drapeado">
       <div className="absolute inset-0 z-0">
         <img src={HERO_IMAGE} alt="Edifícios modernos"
           className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
@@ -25,23 +23,12 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-dark-900/80 via-transparent to-transparent" />
       </div>
 
-      {/* Floating year */}
-      <motion.div
-        initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 1.4, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute top-1/3 right-10 lg:right-20 z-10 hidden md:flex flex-col items-end gap-1"
-        aria-hidden="true"
-      >
-        <span className="font-heading text-[7rem] lg:text-[9rem] font-700 text-white/5 leading-none select-none">2004</span>
-        <span className="font-body text-xs tracking-[0.3em] text-white/30 uppercase">{t('hero.founded')}</span>
-      </motion.div>
-
       <div className="container-site relative z-10 pb-20 md:pb-28">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl md:mx-auto md:text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="flex items-center gap-3 mb-8"
+            className="flex items-center gap-3 mb-8 md:justify-center"
           >
           </motion.div>
 
@@ -54,28 +41,6 @@ export default function HeroSection() {
             <em className="not-italic text-gold-400">{t('hero.line2')}</em><br />
             {t('hero.line3')}
           </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="font-body text-white/60 text-lg md:text-xl leading-relaxed max-w-xl mb-12"
-          >
-            {t('hero.subtitle')}
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="flex flex-col sm:flex-row items-start gap-4"
-          >
-            <Link to={`/${lang}/projetos`} className="btn-primary group">
-              {t('hero.btnProjects')}
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
-            </Link>
-            <Link to={`/${lang}/contato`} className="btn-outline-light">
-              {t('hero.btnQuote')}
-            </Link>
-          </motion.div>
         </div>
 
         <motion.div

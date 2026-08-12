@@ -21,7 +21,7 @@ export default function SobrePreviewSection() {
               <div className="absolute -bottom-6 -right-6 w-48 h-48 border border-gold-500/30 -z-10" aria-hidden="true" />
             </div>
             <div className="absolute -bottom-4 left-8 bg-dark-900 text-white px-8 py-6 shadow-2xl" aria-hidden="true">
-              <span className="font-heading text-5xl text-gold-400 block leading-none">20+</span>
+              <span className="font-heading text-5xl text-gold-400 block leading-none">50+</span>
               <span className="font-body text-xs text-white/50 tracking-widest uppercase mt-1 block">{t('about.badge')}</span>
             </div>
           </AnimatedSection>

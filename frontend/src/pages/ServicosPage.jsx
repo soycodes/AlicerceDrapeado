@@ -20,7 +20,7 @@ const bullets = [
   ['Galpões logísticos','Fábricas e plantas','Centros de distribuição','Hangares e terminais'],
   ['Retrofit de fachadas','Modernização de instalações','Reformas internas','Acessibilidade'],
   ['Planejamento e cronograma','Controle de orçamento','Gestão de fornecedores','Relatórios periódicos'],
-  ['Laudos estruturais','Vistorias de imóveis','Análise de projetos','Conformidade NR-18'],
+  ['Laudos estruturais','Vistorias de imóveis','Análise de projetos','Assessoria Especializada'],
 ]
 
 const HERO_IMG = 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=80&auto=format&fit=crop'
