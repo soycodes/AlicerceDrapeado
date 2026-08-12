@@ -97,18 +97,10 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-site py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="container-site py-6 flex items-center justify-center">
           <p className="font-body text-xs text-white/30">
             © {year} Alicerce Drapeado. {t('footer.rights')}
           </p>
-          <div className="flex items-center gap-6">
-            <Link to={`/${lang}/privacidade`} className="font-body text-xs text-white/30 hover:text-white/60 transition-colors">
-              {t('footer.privacy')}
-            </Link>
-            <Link to={`/${lang}/termos`} className="font-body text-xs text-white/30 hover:text-white/60 transition-colors">
-              {t('footer.terms')}
-            </Link>
-          </div>
         </div>
       </div>
     </footer>
