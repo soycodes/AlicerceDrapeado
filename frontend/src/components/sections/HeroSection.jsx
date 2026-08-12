@@ -24,11 +24,11 @@ export default function HeroSection() {
       </div>
 
       <div className="container-site relative z-10 pb-20 md:pb-28">
-        <div className="max-w-3xl md:mx-auto md:text-center">
+        <div className="max-w-3xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="flex items-center gap-3 mb-8 md:justify-center"
+            className="flex items-center justify-center gap-3 mb-8"
           >
           </motion.div>
 
@@ -46,10 +46,10 @@ export default function HeroSection() {
         <motion.div
           initial={{ opacity: 0 }} animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
-          className="flex flex-wrap items-center gap-10 mt-16 pt-10 border-t border-white/10"
+          className="flex flex-wrap items-center justify-center gap-10 mt-16 pt-10 border-t border-white/10 text-center"
         >
           {stats.map((stat) => (
-            <div key={stat.label} className="flex flex-col gap-1 flex-1">
+            <div key={stat.label} className="flex flex-col gap-1 flex-1 items-center">
               <span className="font-heading text-3xl text-gold-400 font-300">{stat.num}</span>
               <span className="font-body text-xs text-white/40 tracking-wider uppercase">{stat.label}</span>
             </div>

@@ -50,7 +50,13 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${headerBg}`} role="banner">
-      <div className="container-site">
+      {/* Scrim: guarantees contrast for the white nav text over any background */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0) 100%)' }}
+        aria-hidden="true"
+      />
+      <div className="container-site relative">
         <div className="flex items-center justify-between h-20 md:h-24">
 
           {/* Logo */}
@@ -113,7 +119,7 @@ export default function Header() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="lg:hidden bg-dark-900 border-t border-white/10 overflow-hidden"
+            className="lg:hidden relative bg-dark-900 border-t border-white/10 overflow-hidden"
           >
             <nav className="container-site py-8 flex flex-col gap-6">
               {navLinks.map((link, i) => (

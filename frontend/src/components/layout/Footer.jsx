@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 items-center">
 
           {/* Brand */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 flex justify-center">
             <Link to={`/${lang}`} className="inline-flex items-center">
               <img src={logo} alt="Alicerce Drapeado" className="w-40 md:w-48 lg:w-full h-auto" />
             </Link>
